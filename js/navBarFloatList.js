@@ -11,10 +11,10 @@
             let liTags = view.querySelectorAll('nav ul li');
             for(let i=0; i<liTags.length; i++){
               liTags[i].onmouseenter = (x) => {
-               this.currentTarget.active();
+               this.active();
               }
               liTags[i].onmouseleave = (x) => {
-                this.currentTarget.deactive();
+                this.deactive();
               }
             }
         },
