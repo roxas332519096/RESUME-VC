@@ -3,7 +3,6 @@
     for (let i = 0;i < specialTags.length;i++){
       specialTags[i].classList.add('offSet');
     }
-
     setTimeout(() => {
         fineCloset();
     },1100)
@@ -11,7 +10,6 @@
     window.addEventListener('scroll',function(x){
         fineCloset();
     });
-
     function fineCloset(){
         let specialTags = document.querySelectorAll('[data-x]');
         let minIndex = 0;
