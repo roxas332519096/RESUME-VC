@@ -43,7 +43,7 @@
                     let array = messages.map((item) => item.attributes);
                     array.forEach((item) => {
                         let li = document.createElement('li');
-                        li.innerText = `${item.name} : ${item.content}`;
+                        li.innerText = `${item.username} : ${item.content}`;
                         this.messageList.appendChild(li);
                     })
                 }
@@ -59,14 +59,19 @@
             let myForm = this.form;
             let content = myForm.querySelector('input[name=content]').value;
             let username = myForm.querySelector('input[name=username]').value;
-            this.model.save(username,content).then(function(object){
-                  let li = document.createElement('li');
-                  li.innerText = `${object.attributes.name} : ${object.attributes.content}`;
-                  let messagesList = document.querySelector('#messageList');
-                  messagesList.appendChild(li);
-                  myForm.querySelector('input[name=content]').value = '';
-              })
+            if(content !== '' && username !== ''){
+                this.model.save(username,content).then(function(object){
+                    let li = document.createElement('li');
+                    li.innerText = `${object.attributes.username} : ${object.attributes.content}`;
+                    let messagesList = document.querySelector('#messageList');
+                    messagesList.appendChild(li);
+                    myForm.querySelector('input[name=content]').value = '';
+                })
+          }else  {
+              alert('请输入用户名或者留言内容');
+          }
         }
+
     }
     controller.init(view,model);
 }.call();
