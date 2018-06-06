@@ -49,7 +49,7 @@
             <a href="#">联系方式</a>
           </li>
           <li>
-            <a href="#">其他</a>
+            <a href="#leaveMessages">留言</a>
           </li>
         </ul>
       </nav>
@@ -168,7 +168,23 @@
           <div class="swiper-button-next"></div>
       </div>
     </section>
+    <section data-x id="leaveMessages" class="leaveMessages">
+      <h2>留言</h2>
+      <div class="container">
+            <ol id="messageList">
+      
+            </ol>
+            <form id="postMessageForm">
+                <label for="">用户名:</label>
+                <input type="text" name="username" />
+                <label for="">内容:</label>
+                <input type="text" name="content" />
+                <input type="submit" value="提交">
+              </form>
+      </div>
+    </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.2/js/swiper.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.7.1/dist/av-min.js"></script>
     <!-- 模块化 -->
     <script src="./js/navBarFloatList.js"></script>
     <script src="./js/loadingAnimation.js"></script>
@@ -176,5 +192,6 @@
     <script src="./js/scrollToAnchor.js"></script>
     <script src="./js/stickyClosetElement.js"></script>
     <script src="./js/init-swiper.js"></script>
+    <script src="./js/leaveMessages.js"></script>
   </body>
 </html>

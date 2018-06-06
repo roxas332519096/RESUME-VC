@@ -4,7 +4,7 @@ body {
 }
 
 [data-x].offSet{
-    transform: translateY(70px);
+    transform: translateY(100px);
 }
 
 [data-x]{
@@ -403,3 +403,36 @@ text-align: center;
     background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L5%2C44l-4.2-4.2L18.6%2C22L0.8%2C4.2L5%2C0z'%20fill%3D'%23adadad'%2F%3E%3C%2Fsvg%3E");
 }
 
+.leaveMessages .container {
+    width: 900px;
+    padding: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 200px;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+    background: #fff;
+}
+
+.leaveMessages ol {
+    padding: 20px;
+}
+
+.leaveMessages ol li {
+    display:block;
+    border-top: 1px solid #3d4451;
+    border-bottom: 1px solid #3d4451;
+    padding: 16px;
+}
+
+.leaveMessages li:first-child{
+    border-top:2px solid #3d4451;
+
+}
+
+.leaveMessages li:last-child{
+    border-bottom:2px solid #3d4451;
+}
+
+.leaveMessages form {
+    text-align: center;
+}
